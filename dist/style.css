@@ -1,108 +1,161 @@
-html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 2px;
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 2px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    color: rgb(59, 59, 59);
-    background-color: rgb(248, 248, 248);
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(59, 59, 59);
+  background-color: rgb(248, 248, 248);
+  gap: 2px;
 }
 
 .header {
-    font-size: 36px;
-    border-bottom: 1px solid rgb(177, 177, 177);
-    padding: 8px;
+  font-size: 36px;
+  border-bottom: 1px solid rgb(177, 177, 177);
+  padding: 8px;
 }
 
 .main {
-    display: flex;
-    gap: 12px
+  display: flex;
+  gap: 12px;
+  height: 100%;
 }
 
 .sidebar {
-    width: max(200px, 20%);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid rgb(177, 177, 177);
-    padding: 8px;
+  width: min(200px, 30%);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgb(177, 177, 177);
+  padding: 8px;
 }
 
-.sidebar .heading {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgb(177, 177, 177);
+.sidebar .heading,
+.content .heading {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(177, 177, 177);
 }
 
-.sidebar .heading .text {
-    font-size: 20px;
+.sidebar .heading .text,
+.content .heading .text {
+  font-size: 20px;
 }
 
-.sidebar .heading button {
-    height: 20px;
-    width: 20px;
-    background-image: url('plus.svg') ;
-    background-size: 100%;
-    border: none;
+.sidebar .heading button,
+.content .heading button {
+  height: 20px;
+  width: 20px;
+  background-image: url("plus.svg");
+  background-size: 100%;
+  border: none;
 }
 
 .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    list-style-type: none;
-    padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: none;
+  padding-left: 16px;
 }
 
 .project-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 2px;
 }
 
+.project-list li:hover {
+  background-color: rgb(190, 255, 172);
+}
 
- .project-list .color {
-    background-color: red;
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
- }
+.project-list li.active {
+  background-color: rgb(253, 220, 211);
+}
 
- .project-list .new-project {
-    height: 20px;
-    background: rgb(246, 246, 246);
-    border: 1px solid rgb(205, 205, 205);
-    border-radius: 8px;
-    padding: 2px;
-    padding-left: 8px;
- }
+.project-list .color {
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+}
 
- .project-list .new-project:focus {
-    border: 1px solid black;
- }
+.project-list .new-project {
+  height: 20px;
+  background: rgb(246, 246, 246);
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: 8px;
+  padding: 2px;
+  padding-left: 8px;
+}
 
- .content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
- }
+.project-list .new-project:focus {
+  border: 1px solid black;
+}
 
- .content .item {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid rgb(203, 203, 203);
-    border-left: 5px solid green;
- }
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  padding: 8px;
+}
 
- .content .item input {
-    height: 50px;
-    width: 20px;
- }
+.content .item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid rgb(203, 203, 203);
+  border-left: 5px solid rgb(0, 255, 0);
+  padding-left: 8px;
+}
+
+.content .item input {
+  height: 20px;
+  width: 20px;
+}
+
+.new-note {
+  visibility: hidden;
+  width: 50%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  padding: 8px;
+  background-color: white;
+}
+
+.new-note #title {
+  height: 20%;
+  border: none;
+  border-bottom: 1px solid rgb(177, 177, 177);
+  border-radius: 2px;
+}
+
+.new-note #description {
+  flex: 1;
+  border: none;
+}
+
+.new-note button {
+  background: none;
+  background-color: rgb(173, 255, 173);
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 6px;
+}
