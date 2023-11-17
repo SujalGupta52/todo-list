@@ -8,26 +8,49 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="header">ToDo List</div> 
+    <div class="header">ToDo List</div>
     <div class="main">
-    <div class="sidebar">
-      <div class="heading">
-        <div class="text">Projects</div>
-        <div class="buttons"><button></button></div>
-      </div>
-      <ul class="project-list">
-          <li><div class="color"></div><span class="text">Test</span><div class="name"></div></li>
-          <li><div class="color"></div><span class="text">Test</span><div class="name"></div></li>
-          <li><div class="color"></div><span class="text">Test</span><div class="name"></div></li>
-          <input type="text" class="new-project">
-      </ul>
-    </div>
-    <div class="content">
-        <div class="item">
-            <input type="checkbox">
-            <div class="title">This Is a new note</div>
+      <div class="sidebar">
+        <div class="heading">
+          <div class="text">Projects</div>
+          <div class="buttons"><button></button></div>
         </div>
-    </div>
+        <ul class="project-list">
+          <li class="active">
+            <div class="color"></div>
+            <span class="text">Test</span>
+            <div class="name"></div>
+          </li>
+          <li>
+            <div class="color"></div>
+            <span class="text">Test</span>
+            <div class="name"></div>
+          </li>
+          <li>
+            <div class="color"></div>
+            <span class="text">Test</span>
+            <div class="name"></div>
+          </li>
+          <!-- <input type="text" class="new-project"> -->
+        </ul>
+      </div>
+      <div class="content">
+        <div class="heading">
+          <div class="text">Notes</div>
+          <div class="buttons"><button></button></div>
+        </div>
+        <form action="" class="new-note">
+          <input type="text" name="title" id="title" placeholder="Enter a title...">
+          <input type="text" name="description" id="description" placeholder="Enter a description(optional)">
+          <label for="priority">Priority</label>
+          <select name="priority" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button>New Note</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

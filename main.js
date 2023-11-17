@@ -1,9 +1,1 @@
-test = document.querySelector('.sidebar .heading button')
-test.onclick = testFunc
-
-function testFunc() {
-    const temp = document.createElement('input');
-    temp.type = 'text'
-    temp.classList.toggle('new-project');
-    document.querySelector('.project-list').appendChild(temp)
-}
+({138:function(){class t{constructor(t,i,s,e,h){this.title=i,this.description=s,this.priority=e,this.isChecked=!1}}new t("test","test","high",!0),t.prototype.toggleChecked=()=>{this.C=1!=this.C},localStorage.home=JSON.stringify(t)}})[138]();
