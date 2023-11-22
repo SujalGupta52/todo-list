@@ -146,11 +146,16 @@ body {
   border: none;
   border-bottom: 1px solid rgb(177, 177, 177);
   border-radius: 2px;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .new-note #description {
   flex: 1;
   border: none;
+  font-size: 16px;
+  resize: none;
 }
 
 .new-note button {

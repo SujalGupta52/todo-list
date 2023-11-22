@@ -18,18 +18,7 @@
         <ul class="project-list">
           <li class="active">
             <div class="color"></div>
-            <span class="text">Test</span>
-            <div class="name"></div>
-          </li>
-          <li>
-            <div class="color"></div>
-            <span class="text">Test</span>
-            <div class="name"></div>
-          </li>
-          <li>
-            <div class="color"></div>
-            <span class="text">Test</span>
-            <div class="name"></div>
+            <span class="text">Default</span>
           </li>
           <!-- <input type="text" class="new-project"> -->
         </ul>
@@ -40,8 +29,19 @@
           <div class="buttons"><button></button></div>
         </div>
         <form action="" class="new-note">
-          <input type="text" name="title" id="title" placeholder="Enter a title...">
-          <input type="text" name="description" id="description" placeholder="Enter a description(optional)">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter a title..."
+          />
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Enter a description(optional)"
+          ></textarea>
           <label for="priority">Priority</label>
           <select name="priority" id="priority">
             <option value="low">Low</option>
