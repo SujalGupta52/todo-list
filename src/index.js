@@ -8,6 +8,12 @@ class DOMController {
     projectInput.classList.toggle("new-project");
     projectInput.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
+        DOMController.appendProject(
+          event.target.value,
+          "blue",
+          false,
+          projects.length
+        );
         projects.push(
           LogicController.createProject(
             event.target.value,
@@ -15,12 +21,6 @@ class DOMController {
             false,
             projects.length
           )
-        );
-        DOMController.appendProject(
-          event.target.value,
-          "blue",
-          false,
-          projects.length
         );
         DOMController.toggleProjectListInput();
         LogicController.updateStorage();
