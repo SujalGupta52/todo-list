@@ -128,7 +128,7 @@ body {
 .new-note {
   visibility: hidden;
   width: 50%;
-  height: 200px;
+  height: 100px;
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
@@ -142,7 +142,6 @@ body {
 }
 
 .new-note #title {
-  height: 20%;
   border: none;
   border-bottom: 1px solid rgb(177, 177, 177);
   border-radius: 2px;
